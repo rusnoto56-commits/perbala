@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "DatabaseState": {
+      "title": "DatabaseState",
+      "description": "Shared system database containing schools, operators, monthly BOSP pagu, RAB items, cash withdrawals, transaction details, and general system configuration.",
+      "type": "object",
+      "properties": {
+        "schools": {
+          "type": "array",
+          "description": "List of schools monitored in the BOSP system."
+        },
+        "operators": {
+          "type": "array",
+          "description": "List of operator user roles and associated school data."
+        },
+        "monthlyPagu": {
+          "type": "array",
+          "description": "Historical or current school monthly budget and allocation caps."
+        },
+        "rabList": {
+          "type": "array",
+          "description": "Workplan and budget (RAB) items proposed by schools."
+        },
+        "transactions": {
+          "type": "array",
+          "description": "Completed expense transactions recorded in the system."
+        },
+        "tarikTunaiList": {
+          "type": "array",
+          "description": "Cash withdrawal logs tracking bank disbursements to cash."
+        },
+        "systemConfig": {
+          "type": "object",
+          "description": "System-wide customization settings including organization name, deadlines, and logos."
+        }
+      },
+      "required": [
+        "schools",
+        "operators",
+        "monthlyPagu",
+        "rabList",
+        "transactions",
+        "tarikTunaiList",
+        "systemConfig"
+      ]
+    }
+  },
+  "firestore": {
+    "app_data/database": {
+      "schema": "DatabaseState",
+      "description": "Central single-document state storing the entire collaborative, real-time database."
+    }
+  }
+}

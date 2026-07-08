@@ -1,0 +1,6 @@
+{
+  "name": "Monitoring Perbala",
+  "description": "Sistem Monitoring Keuangan Bantuan Operasional Satuan Pendidikan (BOSP) Kabupaten Sejahtera.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

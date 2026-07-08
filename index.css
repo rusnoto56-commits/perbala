@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-darkbg: #f8fafc;
+  --color-darkcard: #ffffff;
+  --color-darknav: #1e1b4b;
+  --color-primary-purple: #a855f7;
+}
+
+/* Print Optimization Style */
+@media print {
+  aside { display: none !important; }
+  header { display: none !important; }
+  footer { display: none !important; }
+  .school-action-col, .user-action-col, .action-column { display: none !important; }
+  main { background: white !important; color: black !important; }
+  .bg-darkcard { background: white !important; border: 1px solid #ccc !important; color: black !important; }
+  #views-wrapper { padding: 0 !important; }
+  body { background: white !important; color: black !important; }
+}
